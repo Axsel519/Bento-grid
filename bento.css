@@ -1,0 +1,304 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --Purple-100: hsl(254, 88%, 90%);
+  --Purple-500: hsl(256, 67%, 59%);
+  --Yellow-100: hsl(31, 66%, 93%);
+  --Yellow-500: hsl(39, 100%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+  --Font-size-paragraph: 18px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  color: var(--Black);
+  background-color: hsl(0deg 0% 96.08%);
+}
+
+h1 {
+  font-weight: 500;
+  width: 15vw;
+}
+
+img {
+  width: 15vw;
+}
+
+p {
+  font-size: var(--Font-size-paragraph);
+  width: 17vw;
+}
+
+.container {
+  align-items: flex-start;
+  padding: 2vh 2vw;
+}
+
+/* Elements with common properties */
+/* Background colors */
+.card-content, .maintain {
+  background-color: var(--Yellow-500);
+}
+
+.right-left .Social, .Grow {
+  background-color: var(--Purple-500);
+  color: var(--White);
+}
+
+.manage, .faster {
+  background-color:var(--White);
+}
+
+/*A card that has common characteristics*/
+
+/* Display Flex for Multiple Elements */
+.Social, .container, .card-content, .left, .card-create, .right, .right-top, .right-left, 
+.right-left .down, .maintain, .manage, .Grow, .right-down {
+  display: flex;
+}
+
+.container, .Grow {
+  flex-direction: row;
+}
+
+.card-content, .Social, .left, .manage, .maintain, .right-left, .right, .card-create {
+  flex-direction: column;
+}
+
+/* Border Radius */
+.card-content, .card-create, .card-schedule, .Social, .maintain, .manage, .faster, .Grow {
+  border-radius: 1vw;
+}
+
+/* Left Section */
+
+.left {
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0vh 2vw;
+  gap: 3vh;
+}
+
+.card-create {
+  align-items: center;
+  padding: 4vh 4vw;
+  background-color: var(--Yellow-100);
+
+}
+
+.card-create b {
+  color: var(--Purple-500);
+}
+
+/* Card Content */
+.card-content {
+  align-items: center;
+  padding: 4vh 4vw;
+}
+
+/* Right Section */
+
+.card-schedule {
+  background-color: var(--Purple-100);
+  padding: 1vh 2vw;
+  height: 70vh;
+}
+
+.card-schedule img {
+  margin: 0vh 1vw;
+}
+
+/*The middle*/
+
+.Social {
+  padding: 4vh 10vw;
+  text-align: center;
+  align-items: center;
+}
+
+.Social i {
+  gap: 10vw;
+}
+
+.Social b, .Social i {
+  color: var(--Yellow-500);
+}
+
+.Social h1 {
+  width: 25vw;
+}
+
+/*Manage card*/
+
+.manage {
+  align-items: center;
+  padding: 2vh 2vw;
+}
+
+.manage h1 {
+  width: 18vw;
+}
+
+/*Maintain card*/
+
+.maintain {
+  align-items: center;
+  padding: 1vh 2vw;
+}
+
+.maintain img {
+  height: 15vh;
+}
+
+/* Flexbox Layouts */
+
+
+.right-top {
+  flex-direction: row-reverse;
+  gap: 2vw;
+  padding-bottom: 5vh;
+}
+
+.right-left {
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5vh;
+}
+
+.right-left .down {
+  flex-direction: row-reverse;
+  gap: 4vw;
+  height: 42vh;
+}
+
+.Grow {
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1vh 1vw;
+  width: 41vw;
+}
+
+.Grow img {
+  margin-right: 7vw;
+}
+
+.faster {
+  width: 22vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 0vw;
+}
+
+.right-down {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5vw;
+}
+
+@media screen and (max-width: 768px) {
+
+  p {
+    width: -webkit-fill-available;
+}
+
+img {
+  width: 30vw;
+  max-width: 34vw;
+}
+
+.manage h1,
+h1 {
+  font-weight: 500;
+  width: 40vw;
+}
+
+.left {
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5vh 2vw;
+  gap: 3vh;
+}
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-top {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.right-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35vh;
+}
+
+.right-left .down {
+  flex-direction: column-reverse;
+  display: flex;
+  align-items: center;
+}
+
+.right-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.manage,
+.maintain,
+.card-schedule,
+.Grow,
+.faster,
+.card-create,
+.card-content {
+  max-width: 50vw;
+  width: 50vw;
+}
+
+.maintain {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.card-schedule {
+  max-height: fit-content;
+}
+
+.Grow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.faster {
+  padding: 1vh 5vw;
+}
+  
+}
